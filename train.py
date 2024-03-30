@@ -33,7 +33,7 @@ transform = transforms.Compose([
     transforms.Resize((244, 244)),
     transforms.ToTensor(),
     RGBToLabTransform(),
-    # transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
 train_dataset = HymenopteraDataset("/content/hymenoptera_data/train",transform=transform)

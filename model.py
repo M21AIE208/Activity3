@@ -6,7 +6,7 @@ class Encoder(nn.Module):
         super(Encoder, self).__init__()
         self.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=2, padding=1)
         self.bn1 = nn.BatchNorm2d(64)
-        self.leaky_relu = nn.Relu()
+        self.leaky_relu = nn.Sigmoid()
         self.conv2 = nn.Conv2d(64, 128, kernel_size=3, stride=2, padding=1)
         self.bn2 = nn.BatchNorm2d(128)
         self.fc = nn.Linear(128 * 61 * 61, 128)
