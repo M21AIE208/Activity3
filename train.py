@@ -77,7 +77,7 @@ criterion = nn.MSELoss()
 optimizer = optim.Adam(autoencoder.parameters(), lr=0.001)
 writer = SummaryWriter()  # Initialize Tensorboard writer
 # Training loop
-for epoch in range(3):  # Adjust the number of epochs as needed
+for epoch in range(10):  # Adjust the number of epochs as needed
     for data in train_dataloader:
         inputs, labels = data
         inputs = inputs.to(device)
