@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from torchvision import transforms
 from custom_dataset import HymenopteraDataset
 from torch.utils.data import DataLoader
-from train import CAE
+from model import CAE
 import torch.optim as optim
 from torch import nn
 from torch.utils.tensorboard import SummaryWriter
